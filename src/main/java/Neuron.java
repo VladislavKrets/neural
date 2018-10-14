@@ -1,9 +1,11 @@
+import java.beans.Transient;
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by lollipop on 13.10.2018.
  */
-public class Neuron {
+public class Neuron implements Serializable{
     private List<Neuron> previousLayer;
     private List<Double> weights;
     private List<Neuron> nextLayer;

@@ -1,10 +1,11 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by lollipop on 13.10.2018.
  */
-public class AbstractNeuralNetwork {
+public class AbstractNeuralNetwork implements Serializable{
     private List<Neuron> firstLayer;
     private List<Neuron> lastLayer;
     private List<List<Neuron>> layers;
@@ -135,5 +136,29 @@ public class AbstractNeuralNetwork {
 
     public List<Neuron> getLastLayer() {
         return lastLayer;
+    }
+
+    public List<List<Neuron>> getLayers() {
+        return layers;
+    }
+
+    public double getLearnRate() {
+        return learnRate;
+    }
+
+    public void setFirstLayer(List<Neuron> firstLayer) {
+        this.firstLayer = firstLayer;
+    }
+
+    public void setLastLayer(List<Neuron> lastLayer) {
+        this.lastLayer = lastLayer;
+    }
+
+    public void setLayers(List<List<Neuron>> layers) {
+        this.layers = layers;
+    }
+
+    public void setLearnRate(double learnRate) {
+        this.learnRate = learnRate;
     }
 }
